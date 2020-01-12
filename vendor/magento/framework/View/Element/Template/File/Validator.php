@@ -1,10 +1,8 @@
 <?php
-
 /**
  * Copyright © Magento, Inc. All rights reserved.
  * See COPYING.txt for license details.
  */
-
 namespace Magento\Framework\View\Element\Template\File;
 
 use \Magento\Framework\App\Filesystem\DirectoryList;
@@ -131,28 +129,18 @@ class Validator
      * @param string $path
      * @param string|array $directories
      * @return bool
-     *
-     * protected function isPathInDirectories($path, $directories)
-     * {
-     * if (!is_array($directories)) {
-     * $directories = (array)$directories;
-     * }
-     * $realPath = $this->fileDriver->getRealPath($path);
-     * foreach ($directories as $directory) {
-     * if (0 === strpos($realPath, $directory)) {
-     * return true;
-     * }
-     * }
-     * return false;
-     * }
      */
+
+    /* added comment to test if patch works */
+
+
+
     protected function isPathInDirectories($path, $directories)
     {
         if (!is_array($directories)) {
-            $directories = (array) $directories;
+            $directories = (array)$directories;
         }
         $realPath = $this->fileDriver->getRealPath($path);
-        $realPath = str_replace('\\', '/', $realPath); // extra code added
         foreach ($directories as $directory) {
             if (0 === strpos($realPath, $directory)) {
                 return true;
@@ -160,6 +148,7 @@ class Validator
         }
         return false;
     }
+
     /**
      * Instantiates filesystem directory
      *

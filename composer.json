@@ -63,13 +63,17 @@
     },
     "version": "2.3.3",
     "minimum-stability": "stable",
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://repo.magento.com/"
-        }
-    ],
+    "repositories": [{
+        "type": "composer",
+        "url": "https://repo.magento.com/"
+    }],
     "extra": {
-        "magento-force": "override"
+        "composer-exit-on-patch-failure": true,
+        "patches": {
+            "magento/framework": {
+                "WAMP/XAMP-issue: admin screen is full grey": "patches/composer/example.diff"
+            }
+        }
     }
+
 }

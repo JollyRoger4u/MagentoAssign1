@@ -3916,6 +3916,11 @@
             "ext-imagick": "Use Image Magick >=3.0.0 as an optional alternative image processing library"
         },
         "type": "magento2-library",
+        "extra": {
+            "patches_applied": {
+                "WAMP/XAMP-issue: admin screen is full grey": "patches/composer/example.diff"
+            }
+        },
         "installation-source": "dist",
         "autoload": {
             "psr-4": {

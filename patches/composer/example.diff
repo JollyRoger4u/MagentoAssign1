@@ -1,0 +1,16 @@
+diff --git a/View/Element/Template/File/Validator.php b/View/Element/Template/File/Validator.php
+index bb3ff0f..680291f 100644
+--- a/View/Element/Template/File/Validator.php
++++ b/View/Element/Template/File/Validator.php
+@@ -149,6 +149,11 @@ class Validator
+      * }
+      * ********************NEW CODE BELOW********************
+      */
++
++    /* added comment to test if patch works */
++
++
++
+     protected function isPathInDirectories($path, $directories)
+     {
+         if (!is_array($directories)) {
