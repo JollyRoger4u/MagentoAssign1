@@ -11,6 +11,7 @@
         "sort-packages": true
     },
     "require": {
+        "cweagans/composer-patches": "^1.6",
         "magento/product-community-edition": "2.3.3",
         "mageplaza/module-gdpr": "1.2.3"
     },
